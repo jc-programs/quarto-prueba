@@ -1,0 +1,70 @@
+# Testing
+
+## Testing basic markdown
+
+### Italic
+
+*Italic text*
+
+### Bold
+
+**Bold text**
+
+### Italic + Bold 
+
+***Italic and bold text***
+
+## Call-outs
+
+There are five types of callouts:  
+1. `note`
+
+::: {.callout-note}
+Remember to cash-in the $1 million check
+:::
+
+2. `tip`
+
+::: {.callout-tip}
+If you find a toilet in your dream, don't use it
+:::
+
+3. `warning`
+
+::: {.callout-warning}
+Don't trust the teacher
+:::
+
+4. `caution`
+
+::: {.callout-caution}
+Mind the gap
+:::
+
+5. `important`.
+
+::: {.callout-important}
+This isn't so important
+:::
+
+
+
+
+## Código python
+
+```{.python filename="run.py"}
+# Program to generate a random number between 0 and 9
+import random
+
+print(random.randint(0,9))
+```
+
+## Mermaid Diagram
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
