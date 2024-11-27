@@ -1,22 +1,23 @@
 #!/bin/bash
 
+LOG_DIR=logs
+
 # check if log directory exists
-if [ ! -d "log" ]; then
+if [ ! -d "${LOG_DIR}" ]; then
     # if not then we try to create it
-    mkdir log
+    mkdir "${LOG_DIR}"
     if [ $? -ne 0 ] ; then
-        echo "log directory does not exist and can't be created."
+        echo "log directory '${LOG_DIR}' does not exist and can't be created."
         exit 1
     fi
 fi
-
 
 log_message() {
     local count=$(printf "%02d" ${COUNT})
     local type="$1"
     local message="$2"
     local timestamp=$(date +"%H:%M:%S")
-    echo "${count}-[${timestamp}] ${type}: ${message}" | tee -a "${LOG_FILE}".txt
+    echo "${count}-[${timestamp}] ${type}: ${message}" | tee -a "${LOG_FILE}"
 }
 
 log_message_error() { 
@@ -31,18 +32,21 @@ log_message_ok() {
     log_message "OK" "$1"
 }
 
-LOG_FILE=log/$(date +"%Y-%m-%d").log
-COUNT_FILE=log/count
+LOG_FILE=${LOG_DIR}/$(date +"%Y-%m-%d").log
+COUNT_FILE=${LOG_DIR}/count
+
+# separating executions in log file with an empty line
 
 # using a count for better track of different executions
 # if log file don't exists => first execution
-if [ ! -f $LOG_FILE ]; then
+if [ ! -f "${LOG_FILE}" ]; then
     COUNT=0
-    # delete count file. No error if not exists
+    # reset count => Delete count file. No error if not exists
     rm -f -- $COUNT_FILE
 else
     # read last value
     read COUNT < $COUNT_FILE 2>/dev/null
+    # count file must exists because is not the first execution
     if [ $? -ne 0 ]; then
         COUNT=99
         log_message_error "Can't read count file '$COUNT_FILE'"
@@ -51,7 +55,7 @@ else
 fi
 # increment count by 1
 (( COUNT++ ))
-# write count to file
+# write count to count file
 echo "$COUNT" > $COUNT_FILE
 if [ $? -ne 0 ]; then
     log_message_error "Can't write count to count file '$COUNT_FILE'"
