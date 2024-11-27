@@ -10,13 +10,13 @@ if [ ! -d "log" ]; then
     fi
 fi
 
-LOG_FILE=log/$(date +"%Y-%m-%d").log
 
 log_message() {
+    local count=$(printf "%02d" ${COUNT})
     local type="$1"
     local message="$2"
     local timestamp=$(date +"%H:%M:%S")
-    echo "[${timestamp}] ${type}: ${message}" | tee -a "${LOG_FILE}".txt
+    echo "${count}-[${timestamp}] ${type}: ${message}" | tee -a "${LOG_FILE}".txt
 }
 
 log_message_error() { 
@@ -26,6 +26,37 @@ log_message_error() {
 log_message_info() {
     log_message "INFO" "$1"
 }
+
+log_message_ok() {
+    log_message "OK" "$1"
+}
+
+LOG_FILE=log/$(date +"%Y-%m-%d").log
+COUNT_FILE=log/count
+
+# using a count for better track of different executions
+# if log file don't exists => first execution
+if [ ! -f $LOG_FILE ]; then
+    COUNT=0
+    # delete count file. No error if not exists
+    rm -f -- $COUNT_FILE
+else
+    # read last value
+    read COUNT < $COUNT_FILE 2>/dev/null
+    if [ $? -ne 0 ]; then
+        COUNT=99
+        log_message_error "Can't read count file '$COUNT_FILE'"
+        exit 1
+    fi
+fi
+# increment count by 1
+(( COUNT++ ))
+# write count to file
+echo "$COUNT" > $COUNT_FILE
+if [ $? -ne 0 ]; then
+    log_message_error "Can't write count to count file '$COUNT_FILE'"
+    exit 1
+fi
 
 # Check if the commit message is provided
 if [ -z "$1" ]; then
@@ -67,7 +98,7 @@ if [ $? -ne 0 ]; then
     log_message_error "git add ."
     exit 1
 else
-    log_message_info "git add ."
+    log_message_ok "git add ."
 fi
 
 git commit -m "$1" 2>/dev/null
@@ -75,7 +106,7 @@ if [ $? -ne 0 ]; then
     log_message_error "git commit -m \"$1\""
     exit 1
 else
-    log_message_info "git commit -m \"$1\""
+    log_message_ok "git commit -m \"$1\""
 fi
 
 git push origin $BRANCH
@@ -83,7 +114,7 @@ if [ $? -ne 0 ]; then
     log_message_error "git push origin $BRANCH"
     exit 1
 else
-    log_message_info "git push origin $BRANCH"
+    log_message_ok "git push origin $BRANCH"
 fi
 
 quarto publish gh-pages --no-prompt
@@ -91,7 +122,7 @@ if [ $? -ne 0 ]; then
     log_message_error "quarto publish gh-pages --no-prompt"
     exit 1
 else
-    log_message_info "quarto publish gh-pages --no-prompt"
+    log_message_ok "quarto publish gh-pages --no-prompt"
 fi
 
 exit 0
