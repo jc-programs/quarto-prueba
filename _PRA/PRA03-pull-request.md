@@ -1,6 +1,10 @@
 # PRA03
 
+First I delete file `.github/workflows/publish.yml` to avoid publication with github actions
+
 ##
+
+
 
 
 ## Content of `publish_quarto.sh`
