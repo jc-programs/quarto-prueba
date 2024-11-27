@@ -9,7 +9,7 @@ Published on [https://jc-programs.github.io/quarto-prueba/](https://jc-programs.
 ![Published](img/03-published.png)
 
 
-```{.yml filename="publish.yml"}
+```{.yml filename=".github/workflows/publish.yml"}
 name: Quarto Publish
 
 on:
