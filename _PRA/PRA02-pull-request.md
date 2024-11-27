@@ -2,7 +2,14 @@
 
 Published on [https://jc-programs.github.io/quarto-prueba/](https://jc-programs.github.io/quarto-prueba/)
 
-```{.yml}
+![Queued job](img/01-queued.png)
+
+![Running job](img/02-running.png)
+
+![Published](img/03-published.png)
+
+
+```{.yml filename="publish.yml"}
 name: Quarto Publish
 
 on:
