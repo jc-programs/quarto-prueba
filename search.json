@@ -11,21 +11,28 @@
     "href": "testing.html",
     "title": "Testing",
     "section": "",
-    "text": "Italic text\n\n\n\nBold text\n\n\n\nItalic and bold text\n\n\n\n\nThere are five types of callouts:\n1. note\n\n\n\n\n\n\nNote\n\n\n\nRemember to cash-in the $1 million check\n\n\n\ntip\n\n\n\n\n\n\n\nTip\n\n\n\nIf you find a toilet in your dream, don’t use it\n\n\n\nwarning\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t trust the teacher\n\n\n\ncaution\n\n\n\n\n\n\n\nCaution\n\n\n\nMind the gap\n\n\n\nimportant.\n\n\n\n\n\n\n\nImportant\n\n\n\nThis isn’t so important\n\n\n\n\n\n\n\nrun.py\n\n# Program to generate a random number between 0 and 9\nimport random\n\nprint(random.randint(0,9))\n\n\n\n\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]"
+    "text": "Italic text\n\n\n\nBold text\n\n\n\nItalic and bold text\n\n\n\nSuperscript number2 (only works with numbers)\n\n\n\nSubscript number2 (only works with numbers)\n\n\n\nStrikethrough text\n\n\n\n\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\nThere are five types of callouts:\n\n\n\n\n\n\n\n\nNote\n\n\n\nRemember to cash-in the $1 million check\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you find a toilet in your dream, don’t use it\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t trust the teacher\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMind the gap\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis isn’t so important\n\n\n\n\n\n\n\n\n\n\n\n\nrun.py\n\n# Program to generate a random number between 0 and 9\nimport random\n\nprint(random.randint(0,9))\n\n\n\n\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]"
   },
   {
     "objectID": "testing.html#testing-basic-markdown",
     "href": "testing.html#testing-basic-markdown",
     "title": "Testing",
     "section": "",
-    "text": "Italic text\n\n\n\nBold text\n\n\n\nItalic and bold text"
+    "text": "Italic text\n\n\n\nBold text\n\n\n\nItalic and bold text\n\n\n\nSuperscript number2 (only works with numbers)\n\n\n\nSubscript number2 (only works with numbers)\n\n\n\nStrikethrough text"
+  },
+  {
+    "objectID": "testing.html#table",
+    "href": "testing.html#table",
+    "title": "Testing",
+    "section": "",
+    "text": "Right\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
   },
   {
     "objectID": "testing.html#call-outs",
     "href": "testing.html#call-outs",
     "title": "Testing",
     "section": "",
-    "text": "There are five types of callouts:\n1. note\n\n\n\n\n\n\nNote\n\n\n\nRemember to cash-in the $1 million check\n\n\n\ntip\n\n\n\n\n\n\n\nTip\n\n\n\nIf you find a toilet in your dream, don’t use it\n\n\n\nwarning\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t trust the teacher\n\n\n\ncaution\n\n\n\n\n\n\n\nCaution\n\n\n\nMind the gap\n\n\n\nimportant.\n\n\n\n\n\n\n\nImportant\n\n\n\nThis isn’t so important"
+    "text": "There are five types of callouts:\n\n\n\n\n\n\n\n\nNote\n\n\n\nRemember to cash-in the $1 million check\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you find a toilet in your dream, don’t use it\n\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDon’t trust the teacher\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nMind the gap\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis isn’t so important"
   },
   {
     "objectID": "testing.html#código-python",

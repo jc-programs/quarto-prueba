@@ -164,8 +164,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#italic" id="toc-italic" class="nav-link" data-scroll-target="#italic">Italic</a></li>
   <li><a href="#bold" id="toc-bold" class="nav-link" data-scroll-target="#bold">Bold</a></li>
   <li><a href="#italic-bold" id="toc-italic-bold" class="nav-link" data-scroll-target="#italic-bold">Italic + Bold</a></li>
+  <li><a href="#superscript" id="toc-superscript" class="nav-link" data-scroll-target="#superscript">Superscript</a></li>
+  <li><a href="#subscript" id="toc-subscript" class="nav-link" data-scroll-target="#subscript">Subscript</a></li>
+  <li><a href="#strikethrough" id="toc-strikethrough" class="nav-link" data-scroll-target="#strikethrough">Strikethrough</a></li>
   </ul></li>
-  <li><a href="#call-outs" id="toc-call-outs" class="nav-link" data-scroll-target="#call-outs">Call-outs</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table">Table</a></li>
+  <li><a href="#call-outs" id="toc-call-outs" class="nav-link" data-scroll-target="#call-outs">Call-outs</a>
+  <ul class="collapse">
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note">1. <code>note</code></a></li>
+  <li><a href="#tip" id="toc-tip" class="nav-link" data-scroll-target="#tip">2. <code>tip</code></a></li>
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">3. <code>warning</code></a></li>
+  <li><a href="#caution" id="toc-caution" class="nav-link" data-scroll-target="#caution">4. <code>caution</code></a></li>
+  <li><a href="#important." id="toc-important." class="nav-link" data-scroll-target="#important.">5. <code>important</code>.</a></li>
+  </ul></li>
+  <li><a href="#vídeo" id="toc-vídeo" class="nav-link" data-scroll-target="#vídeo">Vídeo</a></li>
   <li><a href="#código-python" id="toc-código-python" class="nav-link" data-scroll-target="#código-python">Código python</a></li>
   <li><a href="#mermaid-diagram" id="toc-mermaid-diagram" class="nav-link" data-scroll-target="#mermaid-diagram">Mermaid Diagram</a></li>
   </ul></li>
@@ -194,11 +206,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="italic-bold">Italic + Bold</h3>
 <p><strong><em>Italic and bold text</em></strong></p>
 </section>
+<section id="superscript" class="level3">
+<h3 class="anchored" data-anchor-id="superscript">Superscript</h3>
+<p>Superscript number<sup>2</sup> (only works with numbers)</p>
+</section>
+<section id="subscript" class="level3">
+<h3 class="anchored" data-anchor-id="subscript">Subscript</h3>
+<p>Subscript number<sub>2</sub> (only works with numbers)</p>
+</section>
+<section id="strikethrough" class="level3">
+<h3 class="anchored" data-anchor-id="strikethrough">Strikethrough</h3>
+<p><del>Strikethrough text</del></p>
+</section>
+</section>
+<section id="table" class="level2">
+<h2 class="anchored" data-anchor-id="table">Table</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="call-outs" class="level2">
 <h2 class="anchored" data-anchor-id="call-outs">Call-outs</h2>
-<p>There are five types of callouts:<br>
-1. <code>note</code></p>
+<p>There are five types of callouts:</p>
+<section id="note" class="level3">
+<h3 class="anchored" data-anchor-id="note">1. <code>note</code></h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -212,9 +270,9 @@ Note
 <p>Remember to cash-in the $1 million check</p>
 </div>
 </div>
-<ol start="2" type="1">
-<li><code>tip</code></li>
-</ol>
+</section>
+<section id="tip" class="level3">
+<h3 class="anchored" data-anchor-id="tip">2. <code>tip</code></h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -228,9 +286,9 @@ Tip
 <p>If you find a toilet in your dream, don’t use it</p>
 </div>
 </div>
-<ol start="3" type="1">
-<li><code>warning</code></li>
-</ol>
+</section>
+<section id="warning" class="level3">
+<h3 class="anchored" data-anchor-id="warning">3. <code>warning</code></h3>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -244,9 +302,9 @@ Warning
 <p>Don’t trust the teacher</p>
 </div>
 </div>
-<ol start="4" type="1">
-<li><code>caution</code></li>
-</ol>
+</section>
+<section id="caution" class="level3">
+<h3 class="anchored" data-anchor-id="caution">4. <code>caution</code></h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -260,9 +318,9 @@ Caution
 <p>Mind the gap</p>
 </div>
 </div>
-<ol start="5" type="1">
-<li><code>important</code>.</li>
-</ol>
+</section>
+<section id="important." class="level3">
+<h3 class="anchored" data-anchor-id="important.">5. <code>important</code>.</h3>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -276,6 +334,11 @@ Important
 <p>This isn’t so important</p>
 </div>
 </div>
+</section>
+</section>
+<section id="vídeo" class="level2">
+<h2 class="anchored" data-anchor-id="vídeo">Vídeo</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/22rhgnfTCPA?start=0" title="Cómo (y cuándo) utilizar una API Gateway para casos complejos CodelyTV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="código-python" class="level2">
 <h2 class="anchored" data-anchor-id="código-python">Código python</h2>
@@ -403,7 +466,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jc-programs\.github\.io\/quarto-prueba\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
