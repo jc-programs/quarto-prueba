@@ -1,5 +1,7 @@
 # PRA01
 
+Published on [https://jc-programs.github.io/quarto-prueba/](https://jc-programs.github.io/quarto-prueba/)
+
 ## Tasks
 
 1. [x] Create a Local Markdown Quarto Website
