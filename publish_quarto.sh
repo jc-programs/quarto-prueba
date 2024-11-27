@@ -35,8 +35,6 @@ log_message_ok() {
 LOG_FILE=${LOG_DIR}/$(date +"%Y-%m-%d").log
 COUNT_FILE=${LOG_DIR}/count
 
-# separating executions in log file with an empty line
-
 # using a count for better track of different executions
 # if log file don't exists => first execution
 if [ ! -f "${LOG_FILE}" ]; then
@@ -60,6 +58,11 @@ echo "$COUNT" > $COUNT_FILE
 if [ $? -ne 0 ]; then
     log_message_error "Can't write count to count file '$COUNT_FILE'"
     exit 1
+fi
+
+# separating executions in log file with an empty line
+if [ "$COUNT" -gt 1 ]; then
+    echo >> "${LOG_FILE}"
 fi
 
 # Check if the commit message is provided
