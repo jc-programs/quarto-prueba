@@ -1,2 +1,4 @@
 /.quarto/
 /_site/
+# publish_quarto.sh
+/log/
