@@ -24,10 +24,6 @@ log_message_error() {
     log_message "ERROR" "$1" 
 }
 
-log_message_info() {
-    log_message "INFO" "$1"
-}
-
 log_message_ok() {
     log_message "OK" "$1"
 }
@@ -65,6 +61,10 @@ if [ "$COUNT" -gt 1 ]; then
     echo >> "${LOG_FILE}"
 fi
 
+# log commit message
+log_message "COMMIT MESSAGE" "$1"
+
+
 # Check if the commit message is provided
 if [ -z "$1" ]; then
     log_message_error "Please provide a commit message."
@@ -96,7 +96,7 @@ if [ $? -eq 128 ]; then
 fi
 
 if [ -z "${GS}" ]; then
-    log_message_info "There are no changes to commit."
+    log_message "INFO" "There are no changes to commit."
     exit 0
 fi
 
