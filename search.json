@@ -1,10 +1,17 @@
 [
   {
+    "objectID": "definition.html",
+    "href": "definition.html",
+    "title": "Definition",
+    "section": "",
+    "text": "Definición de Quarto\nEs un motor CLI de publicación de páginas webs (entre otros formatos) utilizando de origen documentos markdown. Utiliza git, github y github pages y git actions\nKeywords:\n\nengine\nmarkdown .md\npublicación\ngit\nautomatización"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "About this site.\nChanged something to test github actions: publish.yml"
   },
   {
     "objectID": "testing.html",
@@ -54,12 +61,5 @@
     "title": "Prueba Quarto",
     "section": "",
     "text": "Esta será mi pagina web con pruebas de Quarto.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "definition.html",
-    "href": "definition.html",
-    "title": "Definition",
-    "section": "",
-    "text": "Definición de Quarto\nEs un motor CLI de publicación de páginas webs (entre otros formatos) utilizando de origen documentos markdown. Utiliza git, github y github pages y git actions\nKeywords:\n\nengine\nmarkdown .md\npublicación\ngit\nautomatización"
   }
 ]
