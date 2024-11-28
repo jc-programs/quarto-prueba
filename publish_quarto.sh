@@ -116,7 +116,7 @@ else
     log_message_ok "git commit -m \"$1\""
 fi
 
-git push origin $BRANCH
+git push origin $BRANCH 2>/dev/null
 if [ $? -ne 0 ]; then
     log_message_error "git push origin $BRANCH"
     exit 1
@@ -124,7 +124,7 @@ else
     log_message_ok "git push origin $BRANCH"
 fi
 
-quarto publish gh-pages --no-prompt
+quarto publish gh-pages --no-prompt 2>/dev/null
 if [ $? -ne 0 ]; then
     log_message_error "quarto publish gh-pages --no-prompt"
     exit 1
