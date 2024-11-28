@@ -61,10 +61,6 @@ if [ "$COUNT" -gt 1 ]; then
     echo >> "${LOG_FILE}"
 fi
 
-# log commit message
-log_message "COMMIT MESSAGE" "$1"
-
-
 # Check if the commit message is provided
 if [ -z "$1" ]; then
     log_message_error "Please provide a commit message."
@@ -78,6 +74,9 @@ if [ $# -gt 1 ]; then
     log_message_error "Arguments where '$*'"
     exit 1
 fi
+
+# log commit message
+log_message "COMMIT MESSAGE" "$1"
 
 # get current branch
 BRANCH=$(git branch --show-current 2>/dev/null)
