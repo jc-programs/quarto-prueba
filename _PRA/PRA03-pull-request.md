@@ -2,7 +2,7 @@
 
 ## Explanation
 
-I deleted file `.github/workflows/publish.yml` to avoid publication with github actions.
+I deleted `.github/workflows/publish.yml` to avoid publication with github actions.
 
 Script execution :
 1. Creation of log directory if not exists.
@@ -186,6 +186,21 @@ exit 0
 03-[11:43:38] OK: git commit -m "permission to execute publish_quarto.sh"
 03-[11:43:39] OK: git push origin master
 03-[11:43:46] OK: quarto publish gh-pages --no-prompt
+
+04-[12:03:12] COMMIT MESSAGE: correct publish_quarto.sh
+04-[12:03:12] OK: git add .
+04-[12:03:12] OK: git commit -m "correct publish_quarto.sh"
+04-[12:03:14] OK: git push origin master
+04-[12:03:20] OK: quarto publish gh-pages --no-prompt
+
+05-[12:03:58] COMMIT MESSAGE: check what happens if there is nothing to commit
+05-[12:03:58] INFO: There are no changes to commit.
+
+06-[12:06:16] COMMIT MESSAGE: mv .git .git.bak to check error when there is no repo
+06-[12:06:16] ERROR: git branch --show-current
+
+07-[12:07:05] COMMIT MESSAGE: mv .git.bak .git to check info when there is repo but no changes
+07-[12:07:05] INFO: There are no changes to commit.
 ```
 
 
