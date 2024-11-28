@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site.\nChanged something more to test github actions: publish.yml"
+    "text": "About this site.\nChanged something to test publish_quarto.sh"
   },
   {
     "objectID": "testing.html",
