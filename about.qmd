@@ -4,5 +4,5 @@ title: "About"
 
 About this site.
 
-Changed something more to test github actions: publish.yml
+Changed something to test `publish_quarto.sh`
 
