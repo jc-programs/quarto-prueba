@@ -4,5 +4,5 @@ title: "About"
 
 About this site.
 
-Changed something to test `publish_quarto.sh`
+Changed something more to test `publish_quarto.sh`
 
